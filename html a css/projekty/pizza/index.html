@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://api.mapy.cz/loader.js"></script>
+	<script>Loader.load()</script>
+</head>
+<body>
+    
+    <header>
+        <img src="logo.png" class="logo" alt="logo">
+        <nav class="nav">
+            <ul>
+                <li><a href="#about-us">O NÁS</a></li>
+                <li><a href="#menu">MENU</a></li>
+                <li><a href="#contacts">KONTAKTY</a></li>
+            </ul>
+        </nav> 
+        <h1 class="main-header">Pizza and Pasta </h1>
+        <div class="subheading">
+            <h2>Nejlepší pizzerie v Praze</h2>
+            <a href="">Objednej roztvoz</a>
+            <a href="">Menu</a>
+        </div>
+    </header>
+
+    <section class="section-about-us">
+        <h2 id="about-us" class="section-header">O nás</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, modi ratione. Earum odit cumque alias inventore, aperiam nam id consectetur fuga nulla rem, expedita esse voluptatibus, a impedit fugiat sint in itaque porro possimus. Quidem nulla necessitatibus veniam facilis facere voluptatum doloremque accusamus laboriosam ducimus error. Provident tempora, voluptas quis quidem officiis, pariatur totam ex recusandae placeat nihil nesciunt distinctio veniam, culpa vel odio debitis fuga necessitatibus! Doloremque quo facilis veritatis sapiente perferendis, unde eligendi rem magni! In numquam, fuga aspernatur quaerat praesentium recusandae explicabo sint labore doloribus nulla! Molestias iste quisquam atque dolorum voluptatibus quis perspiciatis sapiente distinctio accusantium.</p>
+    </section>
+    
+    <footer>
+        <div id="mapa" class="mapa" style="width:600px; height:400px;"></div>
+                <script type="text/javascript">
+                    var stred = SMap.Coords.fromWGS84(15.245, 49.2737);
+                    var mapa = new SMap(JAK.gel("mapa"), stred, 18);
+                    mapa.addDefaultLayer(SMap.DEF_BASE).enable();
+                    mapa.addDefaultControls();	      	      
+                </script>
+    </footer>
+</body>
+</html>
+<!-- id = na něco odkazuje -->
+<!-- Lapa.ninja nebo awwwards.com -->
+<!-- fotobanka - unsplash.com, pixabay.com, pexels.com -->
+<!-- thenounproject.com -->

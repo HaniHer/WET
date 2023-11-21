@@ -1,0 +1,23 @@
+.red {
+    width: 100px;
+    height: 150px;
+    background-color: red;
+    display: inline-block;
+}
+.black {
+    width: 100px;
+    height: 150px;
+  background-color: black;
+  display: inline-block;
+}
+.yellow {
+    width: 100px;
+    height: 150px;
+    background-color: yellow;
+   display: inline-block;
+
+}
+.vlajka {
+    margin: 30px 1px 5px 30px;
+   color: white;
+}

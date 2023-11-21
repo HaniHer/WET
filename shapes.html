@@ -1,0 +1,120 @@
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Test</title>
+        <style>
+            div {
+                display: flex;
+    flex-direction: column;
+    align-items: center;
+            }
+            body {
+                font-family: monospace;
+                font-size: 32px;
+            }
+
+
+            .tlacitko {
+                padding: 10px;
+                font-size: 20px;
+                margin: 10px;
+            }
+
+            .platno {
+                border: 2px solid black;
+                width: 800px;
+                height: 500px;
+                
+            }
+
+            .ctverec {
+                border: 2px solid black;
+                background-color: rgba(55, 0, 255, 0.801);
+                width: 100px;
+                height: 100px;
+            }
+
+            .kolecko {
+                width: 100px;
+        height: 100px;
+        background-color: red;
+        display: inline-block;
+        border-radius: 50%;
+            }
+
+            .text-box {
+                width: 50px;
+                height: 100px;
+            }
+
+            .obrazek {
+                width: 50px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <img class="obrazek" src="hide.png" alt="">
+        <div>
+            <h1>Picasso</h1>
+            <div class="platno">
+                <div id="ctverec"></div>
+                <div id="kolecko"></div>
+                <div id="text-box"></div>
+            </div>
+            <button id="tlacitkoText" class="tlacitko">Text</button>
+            <button id="tlacitkoKolecka" class="tlacitko">Kolečka</button>
+            <button id="tlacitkoCtverce" class="tlacitko">Čtverečky</button>
+        </div>
+        
+
+        <script>
+            const platno = document.querySelector(".platno")
+            const div = document.querySelector("div")
+            const tlacitkoCtverce = document.querySelector("#tlacitkoCtverce")
+            const tlacitkoKolecka = document.querySelector("#tlacitkoKolecka")
+            const tlacitkoText = document.querySelector("#tlacitkoText")
+            const obrazek = document.querySelector(".obrazek")
+            const wrapper = document.querySelector(".wrappper")
+            let pocet = 0
+
+            obrazek.addEventListener("click", zmen)
+            tlacitkoCtverce.addEventListener("click", kresliCtverec)
+            function zmen() {
+                pocet++
+                if (pocet % 2 === 0) {
+                    div.style.display = "block"
+                } else {
+                    div.style.display = "none"
+                }  }
+            function kresliCtverec() {
+                for (let i = 0; i < 5; i++) {
+                let ctverec = document.createElement("div")
+                ctverec.classList.add("ctverec")
+                platno.appendChild(ctverec)
+        }
+              
+            }
+            tlacitkoKolecka.addEventListener("click", kresliKolecko)
+            function kresliKolecko() {
+                for (let i = 0; i < 5; i++) {
+                let kolecko = document.createElement("div")
+                kolecko.classList.add("kolecko")
+                platno.appendChild(kolecko)
+        }
+                
+            }
+            tlacitkoText.addEventListener("click", kresliText)
+            function kresliText() {
+            for (let i = 0; i < 5; i++) {
+                let text = document.createElement("div")
+                text.innerText = "Ahoj"
+                text.classList.add("text-box")
+                platno.appendChild(text)
+        }  } 
+
+        </script>
+    </body>
+</html>
+

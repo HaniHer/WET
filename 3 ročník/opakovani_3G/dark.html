@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+</head>
+<body>
+    <img class="images" src="mesic.jfif" />
+    <div><h1 style="font-family: 'Nunito';">Nadpis</h1>
+    <p style="font-family: 'Lora';"> Lorem ipsum dolor sit amet consectetur,
+         adipisicing elit. Maiores, dolore nulla 
+         maxime modi autem in?
+    </p>
+    <button id="tlacitko">nic nedělající tlačítko</button></div>
+    
+    <script>
+      let mes = document.querySelector(".images") 
+      let ele = document.body
+      let pocet = 0
+        let uhodnuto = false
+        mes.addEventListener("click", zmen)
+        function zmen() {
+                pocet++
+                if (pocet % 2 === 0) {
+                  ele.className = "light-mode"  
+                } else {
+                ele.className = "dark-mode"
+                }  }
+    </script>
+    <style>
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body{
+ background-color: #C2FCD5;
+ color: #003B0E;
+}
+
+.images {
+    width: 70px;
+    height: auto;
+    }
+.dark-mode {
+    background-color: #003B0E;
+    color: #C2FCD5;
+}
+.light-mode {
+    background-color: #C2FCD5;
+    color: #003B0E;
+}
+    </style>
+</body>
+</html>

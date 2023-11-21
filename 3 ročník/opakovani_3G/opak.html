@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="zek"><img class="images3" src="slunce.jpg" />
+    <img class="images4" src="knihy.png" /></div> <br />
+    <div class="obraz"><h1 id="nadpis"></h1></div>
+    <div class="obraz"><h2 id="podnadpis"></h2></div><br /><br /><br /><br />
+    <div class="obraz"><img class="images" src="letoo.jpg" />
+    <img class="images2" src="trebesin.jpg" /></div>
+    <script>
+        let nadpis = document.getElementById("nadpis")
+        let podnadpis = document.getElementById("podnadpis")
+        let obrazek1 = document.querySelector(".images")
+        let obrazek2 = document.querySelector(".images2")
+        let obrazek3 = document.querySelector(".images3")
+        let obrazek4 = document.querySelector(".images4")
+        let pocet = 0
+        let uhodnuto = false
+        obrazek3.addEventListener("click", zmen)
+        obrazek4.addEventListener("click", zmen1)
+        function zmen() {
+            
+                    obrazek1.style.display = "block"
+                    obrazek2.style.display = "none"
+                    obrazek3.style.display = "none"
+                    obrazek4.style.display = "block"
+                    nadpis.innerText = "Léto"
+                    podnadpis.innerText = "2 měsice práznin"
+        }
+        function zmen1() {
+                    obrazek2.style.display = "block"
+                    obrazek1.style.display = "none"
+                    obrazek3.style.display = "block"
+                    obrazek4.style.display = "none"
+                    nadpis.innerText = "Škola"
+                    podnadpis.innerText = "10 měsicu utrpení"
+                  }
+    </script>
+    <style>
+        body {
+    background-color: rgb(230, 250, 255);
+}
+.images {
+width: 600px;
+height: auto;
+border: 5px solid rgb(202, 51, 51);
+border-radius: 5%;
+}
+.zek {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+.images2 {
+    width: 600px;
+    height: auto;
+    border: 5px solid rgb(130, 183, 243);
+    border-radius: 5%;
+    }
+.images3 {
+    width: 60px;
+    height: auto;
+    border: 3px solid rgb(251, 255, 0);
+    border-radius: 5%;
+    }
+.images4 {
+    width: 60px;
+    height: auto;
+    border: 3px solid rgb(54, 83, 121);
+    border-radius: 5%;
+    }
+.obraz {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+li  {
+    font-family: fantasy;
+    color: dimgrey;
+}
+.tlacitko
+ {
+    background-color: rgb(131, 185, 240);
+border-color: lightblue;
+}
+ 
+
+/* .zek {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    } */
+
+    </style>
+</body>
+</html>

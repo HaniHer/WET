@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Array</title>
+    </head>
+    <body>
+        <h1>seznam</h1>
+        <input type="text" id="input1" /> <br />
+        <button id="tlacitko">Klik</button> <br />
+        <h1 id="podnadpis"></h1>
+        <script>
+            const seznam = ["Darth Vader", "Luke Skywalker", "Obi-Wan Kenobi"]
+            let tlacitko1 = document.querySelector("#tlacitko")
+            let podnadpis = document.getElementById("podnadpis")
+            let input1 = document.querySelector("#input1")
+            tlacitko1.addEventListener("click", zmenSeznam)
+            function zmenSeznam() {
+                let textInputu = input1.value
+                seznam.push(textInputu)
+                podnadpis.innerText = " "
+                for (let i = 0; i < seznam.length; i++) {
+                    // console.log(seznam[i])
+                    podnadpis.innerText += seznam[i] + "\n"
+                }
+            }
+
+            // const seznam = ["Darth Vader", "Luke Skywalker", "Obi-Wan Kenobi"]
+            // seznam.push("Chewie", "Yoda", "Ewok", "Princess Leia")
+            // seznam.pop()
+            // seznam.shift()
+            // seznam.splice(3, 1)
+            // for (let i = 0; i < seznam.length; i++) {
+
+            //     console.log(seznam[i])
+            // }
+        </script>
+    </body>
+</html>
+<!-- [] = Pravý alt + F -->
+<!-- push = přidává -->
+<!-- pop = Odebírá poslední hodnotu z arraye-->
+<!-- shift = Odebírá první hodnotu z arraye-->
+<!-- splice(3, 1) = odebirá od 3 jednoho-->
+<!-- splice(2, 3) = odebirá od 2 tři-->

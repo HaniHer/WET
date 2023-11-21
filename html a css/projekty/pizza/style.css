@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+header {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("pizza-background.jpg");
+    background-size: cover;
+    position: relative;
+}
+.logo{
+height: 100px;
+width: auto;
+position: absolute;
+left: 8%;
+top: 2%;
+}
+.nav{
+    font-size: 1.1em;
+    text-align: center;
+    width: 60vh;
+    position: absolute;
+    left: 15%;
+}
+.nav li {
+display: inline-block;
+font-weight: bold;
+padding: 0 5%;
+}
+.nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.main-header {
+    font-size: 4.5em;
+    color: white;
+    position: absolute;
+    left: 8%;
+    bottom: 25%;
+    text-shadow: 0 0 10px black;
+}
+.subheading {
+    color: white;
+    position: absolute;
+    bottom: 8%;
+    left: 8%;
+    padding: 10px;
+    
+}
+.subheading a {
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    margin-right: 10px;
+}
+section {
+    margin: 0 25%;
+}
+section p {
+    text-align: justify;
+}
+footer {
+display: flex;
+justify-content: center;
+}
+/* { = alt gr + B */
+/* } = alt gr + N */
+/* px = pixel */
+/* em = relativní velikost k tomu kde se nachazí */
+/* rem = relativní velikost k celemu webu (default text-size=16px */
+/* vw = view width */
+/* vh = view height */
+/* url = odkazuje a do uvozovek */
+
+

@@ -1,0 +1,19 @@
+.blue {
+    background-color: blue;
+    color: white;
+    margin: 5 10 ;
+    padding: 20;
+    border: 10px dashed rgb(241, 15, 15);
+}
+.red {
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+.green {
+    background-color: rgb(51, 255, 0);
+    color: white;
+}
+.kecup {
+    background-color: rgb(51, 255, 0);
+    color: white;
+}

@@ -1,0 +1,16 @@
+.w {
+    color: white;
+    margin: 300 100 500 300;
+}
+.red {
+    background-color: rgb(255, 0, 0);
+    padding: 30;
+}
+.black {
+    background-color: rgb(5, 5, 5);
+    padding: 30;
+}
+.yellow {
+    background-color: rgb(229, 255, 0);
+    padding: 30;
+}

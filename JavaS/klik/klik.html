@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Array</title>
+        <link rel="stylesheet" href="klik.css" />
+    </head>
+    <body>
+        <h1 class="nadpis">Klikej!</h1>
+        <button id="tlacitko">Začít</button> <br />
+        <h1 id="podnadpis"></h1>
+        <h1 id="podnadpis2"></h1>
+        <h1 id="podnadpis3"></h1>
+        <div id="div"></div>
+        <script>
+            const seznamSlov = ["lokomotiva", "letadlo", "auto", "matematika"]
+            let tlacitko = document.querySelector("#tlacitko")
+            let podnadpis = document.getElementById("podnadpis")
+            let podnadpis2 = document.getElementById("podnadpis2")
+            let div = document.querySelector("#div")
+            let obrazek1 = document.querySelector(".images")
+            let obrazek2 = document.querySelector(".images2")
+            let obrazek3 = document.querySelector(".images3")
+            let odpoved = []
+            let cislo = 0
+            tlacitko.addEventListener("click", setTimeout(B, 10000))
+            function B() {
+                createElement(div)
+                div.appendChild(node)
+                div.addEventListener("click", removeEventListener)
+            }
+        </script>
+    </body>
+</html>
+<!-- [] = Pravý alt + F -->
+<!-- push = přidává -->
+<!-- pop = Odebírá poslední hodnotu z arraye-->
+<!-- shift = Odebírá první hodnotu z arraye-->
+<!-- splice(3, 1) = odebirá od 3 jednoho-->
+<!-- splice(2, 3) = odebirá od 2 tři-->

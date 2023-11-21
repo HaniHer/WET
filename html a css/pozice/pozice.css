@@ -1,0 +1,85 @@
+.blue {
+    background-color: blue;
+    display: none;
+    color: white;
+
+}
+.red {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    display: inline-block;
+    width: 75%;
+}
+.green {
+    background-color: rgb(51, 255, 0);
+    color: white;
+    display: inline;
+
+    
+}
+body {
+margin: 0;
+padding: 0;
+}
+.spagety{
+  background-color: yellow;
+  display: block;
+  border: 5px solid black;
+  padding: 50px;
+  width: 200px;
+  height: 200px;
+  box-sizing: border-box;
+    }
+.kecup {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    text-align: center;
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    height: 50px;
+    line-height: 50px;
+}
+
+
+
+/* proč teletubbies? */
+.slunicko {
+width: 250px;
+height: 300px;
+background-color: yellow;
+position: relative;
+}
+.T {
+width: 200px;
+height: 50px;
+}
+.tinky-winky {
+background-color: purple;
+position: sticky;
+left: 30px;
+top: 30px;
+}
+.laalaa {
+    background-color: rgb(238, 255, 6);
+    }
+.po {
+    background-color: rgb(255, 6, 6);
+    }
+.dipsy  {
+    background-color: rgb(48, 255, 6);
+    }
+
+/* samotnému bloku nemuzeme dat vysku a sirku */
+/* inline bloku už jo */
+/* aby šel vycentrovat do prostřed musi mít širku */
+/* ale jde to nej do prostřed  */
+/* pozice= position */
+/* Position relative = furt stejny
+ale novy vlastnosti jako left (top = ze zhora) */
+/* relativni nena moc vyuziti protože překrývá */
+/* absolutní pozice na zakladě vztahu k rodicum 
+(tady sluničko nema jistou pozici proto tinky-winky leti na horu
+= přepnout sluníčko na relative */
+/* absolute = uplně vyjme a všichni ho ignoruji (proto teď je první dipsy)  */
+/* je lepivý, pohybuje se s tím */

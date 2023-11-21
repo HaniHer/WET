@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Test</title>
+    </head>
+    <body>
+        <h1>Zadej slovo</h1>
+        <input type="text" id="input1" /> <br />
+        <button id="tlacitko">Přidej slovo</button> <br />
+        <h1> seznam slov </h1>
+        <h1 id="podnadpis"></h1>
+        <button id="tlacitko2">Zavolej Popelku</button> <br />
+        <h1>Krátký </h1>
+        <h1 id="podnadpis2"></h1>
+        <h1>Dlouhý </h1>
+        <h1 id="podnadpis22"></h1>
+        <br><br><br><br><br><br><br>
+        <h1>Hodnocení </h1>
+        <h1>Jak moc mě bavil tento úkol</h1>
+        <input type="text" id="input2" /> <br />
+        <button id="tlacitko3">Hodnocení</button> <br />
+        <h1 id="podnadpis3"></h1>
+        <script>
+            const seznam = []
+            let tlacitko = document.querySelector("#tlacitko")
+            let tlacitko2 = document.querySelector("#tlacitko2")
+            let tlacitko3 = document.querySelector("#tlacitko3")
+            let podnadpis = document.getElementById("podnadpis")
+            let podnadpis2 = document.getElementById("podnadpis2")
+            let podnadpis22 = document.getElementById("podnadpis22")
+            let podnadpis3 = document.getElementById("podnadpis3")
+            let input1 = document.querySelector("#input1")
+            let input2 = document.querySelector("#input2")
+            // pridej 
+            tlacitko.addEventListener("click", Zseznam)
+            function Zseznam () {
+                let textInputu = input1.value
+                seznam.push(textInputu)
+                podnadpis.innerText = " "
+                console.log(seznam)
+                for (let i = 0; i < seznam.length; i++) {
+                    // console.log(seznam[i])
+                    podnadpis.innerText += seznam[i] + "\n"
+                }}
+            // popelka
+            tlacitko2.addEventListener("click", popelka)
+            function popelka () {
+                for (let l = 0; l < seznam.length; l++) {
+                    slovo = seznam[l]
+                if (slovo.length < 4) { 
+                    podnadpis2.innerText += slovo + "\n"
+
+                } else{podnadpis22.innerText += slovo + "\n"} }}
+            // hodnocení
+            tlacitko3.addEventListener("click", hod)
+            function hod () {
+                let cislo = input2.value
+                for (let i = 0; i < cislo; i++) {
+                    podnadpis3.innerText += "❤️"
+            }}
+           
+        </script>
+    </body>
+</html>
+

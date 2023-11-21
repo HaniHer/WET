@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vylepšená stránka</title>
+</head>
+
+<body>
+    <div class="prvni"> 
+        <h1 class="nadpis1">Picasso</h1>
+        <div class="platno"></div>
+        <div class="box">
+            <h1 class="nadpis2">Kolik tvarů?</h1>
+            <input type="text" id="input">
+        </div>
+        <div class="tlacitka">
+            <button id="tlacitkoText">Text</button>
+            <button id="tlacitkoKolecka">Kolečka</button>
+            <button id="tlacitkoCtverce">Čtverečky</button>
+            <button id="tlacitkoTrojuhelniku">Trojúhelníky</button>
+        </div>
+        <img class="obrazek" src="hide.png" alt="" />
+    </div>
+
+    <div class="druhy">
+        <img class="obrazek2" src="hide.png" alt="" />
+    </div>
+    
+
+    <style>
+        body {
+            font-family: monospace;
+            font-size: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px;
+        }
+
+        .prvni{
+            display: inline;
+        }
+
+        .druhy{
+            display: none;
+        }
+        
+        .nadpis1 {
+            font-size: 45px;
+            text-align: center;
+            margin: 2px 0px 10px 0px;
+        }
+
+        .nadpis2 {
+            font-size: 30px;
+            text-align: center;
+            margin-right: 20px;
+        }
+
+        .platno {
+            border: 2px solid black;
+            width: 800px;
+            height: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items:flex-start;
+            margin: 5px;
+        }
+
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #input{
+            font-size: 20px;
+            text-align: center;
+            width: 50px;
+            height: 40px;
+            border-radius: 5px;
+        }
+
+        .tlacitka{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        #tlacitkoText{
+            margin: 5px 20px 0px 0px;
+            background-color:rgb(152, 246, 152);
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+        }
+
+        #tlacitkoKolecka{
+            margin: 5px 20px 0px 0px;
+            background-color:rgb(152, 246, 152);
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 70px;
+            height: 40px;
+            text-align: center;
+        }
+
+        #tlacitkoCtverce{
+            margin: 5px 20px 0px 0px;
+            background-color:rgb(152, 246, 152);
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 80px;
+            height: 40px;
+            text-align: center;
+        }
+
+        #tlacitkoTrojuhelniku{
+            margin: 5px 20px 0px 0px;
+            background-color:rgb(152, 246, 152);
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 90px;
+            height: 40px;
+            text-align: center;
+        }
+
+        .obrazek {
+            width: 50px;
+            position: absolute;
+            top: 25px;
+            left: 72%;
+        }
+        .obrazek2 {
+            width: 50px;
+            position: absolute;
+            top: 25px;
+            left: 72%;
+        }
+        .ctverec {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            background-color: rgb(250, 200, 152);
+            margin: 5px 0px 0px 5px;
+            border: 2px solid black;
+        }
+
+        .kolecko {
+            height: 50px;
+            width: 50px;
+            display: inline-block;
+            background-color: rgb(138, 210, 220);
+            border: 2px solid black;
+            border-radius: 50%;
+            margin: 5px 0px 0px 5px;
+        }
+
+        .trojuhelnik{
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-width: 55px 35px 0 35px;
+            border-color: rgb(199, 129, 211) transparent transparent transparent;
+            transform: rotate(180deg);
+            margin: 5px 0px 0px 5px;
+        }
+
+        .text{
+            font-size: 5px;
+            margin: 20px 0px 0px 20px;
+        }
+    </style>
+
+    <script>
+        let prvni = document.querySelector(".prvni")
+        let druhy = document.querySelector(".druhy")
+        let platno = document.querySelector(".platno")
+        let tlacitkoText = document.querySelector("#tlacitkoText")
+        let tlacitkoKolecka = document.querySelector("#tlacitkoKolecka")
+        let tlacitkoCtverce = document.querySelector("#tlacitkoCtverce")
+        let tlacitkoTrojuhelniku = document.querySelector("#tlacitkoTrojuhelniku")
+        let obrazek = document.querySelector(".obrazek")
+        let input = document.querySelector("#input")
+
+        tlacitkoText.addEventListener("click", kresliText)
+            function kresliText() {
+                for (let i = 0; i < parseInt(input.value); i++){
+                    let novyText = document.createElement("div")
+                    novyText.classList.add("text-box")
+                    novyText.innerText = "Ne"
+                    platno.appendChild(novyText)
+                }
+            }
+
+        tlacitkoKolecka.addEventListener("click", kresliKolecko)
+            function kresliKolecko() {
+                for (let i = 0; i < parseInt(input.value); i++){
+                    let novykolecko = document.createElement("div")
+                    novykolecko.classList.add("kolecko")
+                    platno.appendChild(novykolecko)
+                }
+            }
+
+        tlacitkoCtverce.addEventListener("click", kresliCtverec)
+            function kresliCtverec() {
+                for (let i = 0; i < parseInt(input.value); i++){
+                    let novyctverec = document.createElement("div")
+                    novyctverec.classList.add("ctverec")
+                    platno.appendChild(novyctverec)
+                }
+            }
+
+        tlacitkoTrojuhelniku.addEventListener("click", kresliTrojuhelnik)
+            function kresliTrojuhelnik() {
+                for (let i = 0; i < parseInt(input.value); i++){
+                    let novytrojuhelnik = document.createElement("div")
+                    novytrojuhelnik.classList.add("trojuhelnik")
+                    platno.appendChild(novytrojuhelnik)
+                }
+            }
+        let obrazek2 = document.querySelector(".obrazek2")
+        obrazek.addEventListener("click", zmenit)
+            function zmenit(){
+                prvni.style.display = "none"
+                druhy.style.display = "inline"
+            }
+         obrazek2.addEventListener("click", zmenit2)
+         function zmenit2(){
+                prvni.style.display = "inline"
+                druhy.style.display = "none"
+            }
+    </script>
+</body>
+
+</html>

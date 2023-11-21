@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Array</title>
+        <link rel="stylesheet" href="sibenice.css" />
+    </head>
+    <body>
+        <h1 class="nadpis">Šibenice</h1>
+        <input type="text" id="input1" /> <br />
+        <button id="tlacitko">Klik</button> <br />
+        <h1 id="podnadpis"></h1>
+        <h1 id="podnadpis2"></h1>
+        <h1 id="h">0</h1>
+        <img class="images" src="š_1.png" />
+        <img class="images2" src="š_2.png" />
+        <img class="images3" src="š_3.png" />
+        <script>
+            const seznamSlov = ["lokomotiva", "letadlo", "auto", "matematika"]
+            let hadat =
+                seznamSlov[Math.floor(Math.random() * seznamSlov.length)]
+            console.log(hadat)
+            // const seznam = ["Darth Vader", "Luke Skywalker", "Obi-Wan Kenobi"]
+            let tlacitko = document.querySelector("#tlacitko")
+            let podnadpis = document.getElementById("podnadpis")
+            let podnadpis2 = document.getElementById("podnadpis2")
+            let input1 = document.querySelector("#input1")
+            let obrazek1 = document.querySelector(".images")
+            let obrazek2 = document.querySelector(".images2")
+            let obrazek3 = document.querySelector(".images3")
+            let odpoved = []
+            let cislo = 0
+            let h = document.getElementById("h")
+            for (let i = 0; i < hadat.length; i++) {
+                odpoved[i] = " _"
+            }
+            for (let i = 0; i < odpoved.length; i++) {
+                podnadpis.innerText += odpoved[i]
+            }
+            let pocetPokusu = 0
+            let uhodnuto = false
+            tlacitko.addEventListener("click", zmen)
+            function zmen() {
+                uhodnuto = false
+                let pismeno = input1.value
+                for (let i = 0; i < hadat.length; i++) {
+                    if (pismeno === hadat[i]) {
+                        odpoved[i] = pismeno
+                        uhodnuto = true
+                    }
+                }
+                if (uhodnuto === false) {
+                    pocetPokusu++
+                    h.innerText = pocetPokusu
+                }
+                podnadpis.innerText = " "
+                for (let i = 0; i < odpoved.length; i++) {
+                    podnadpis.innerText += odpoved[i]
+                }
+
+                if (pocetPokusu === 0) {
+                    obrazek1.style.display = "none"
+                    obrazek2.style.display = "none"
+                    obrazek3.style.display = "none"
+                } else if (pocetPokusu === 1) {
+                    obrazek1.style.display = "block"
+                    obrazek2.style.display = "none"
+                    obrazek3.style.display = "none"
+                } else if (pocetPokusu === 2) {
+                    obrazek1.style.display = "none"
+                    obrazek2.style.display = "block"
+                    obrazek3.style.display = "none"
+                } else if (pocetPokusu === 3) {
+                    obrazek1.style.display = "none"
+                    obrazek2.style.display = "none"
+                    obrazek3.style.display = "block"
+                }
+                // console.log(2)
+                // let textInputu = input1.value
+                // if (hadat === "pokus") {
+                //     if (textInputu === "o") {
+                //         podnadpis[1] = "o"
+                //     } else if (textInputu === "p") {
+                //         podnadpis[0] = "p"
+                //     } else if (textInputu === "k") {
+                //         podnadpis[2] = "k"
+                //     } else if (textInputu === "u") {
+                //         podnadpis[3] = "u"
+                //     } else if (textInputu === "s") {
+                //         podnadpis[4] = "s"
+                //     } else {
+                //         podnadpis2 = podnadpis2 + textInputu
+                //     }
+                // } else {
+                //     podnadpis = "nefunguje"
+                // }
+            }
+            // seznam.push(textInputu)
+            // for (let i = 0; i < seznam.length; i++) {
+            //     // console.log(seznam[i])
+            //     podnadpis.innerText += seznam[i] + "\n"
+            //
+
+            // const seznam = ["Darth Vader", "Luke Skywalker", "Obi-Wan Kenobi"]
+            // seznam.push("Chewie", "Yoda", "Ewok", "Princess Leia")
+            // seznam.pop()
+            // seznam.shift()
+            // seznam.splice(3, 1)
+            // for (let i = 0; i < seznam.length; i++) {
+
+            //     console.log(seznam[i])
+            // }
+        </script>
+    </body>
+</html>
+<!-- [] = Pravý alt + F -->
+<!-- push = přidává -->
+<!-- pop = Odebírá poslední hodnotu z arraye-->
+<!-- shift = Odebírá první hodnotu z arraye-->
+<!-- splice(3, 1) = odebirá od 3 jednoho-->
+<!-- splice(2, 3) = odebirá od 2 tři-->

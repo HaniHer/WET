@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(226, 249, 255);
+}
+.nadpis {
+    color: #001368;
+    font-size: 50px;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.images {
+    display: none;
+}
+.images2 {
+    display: none;
+}
+.images3 {
+    display: none;
+}

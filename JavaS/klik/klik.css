@@ -1,0 +1,20 @@
+body {
+    background-color: rgb(143, 143, 143);
+}
+.nadpis {
+    color: #001368;
+    font-size: 50px;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+#tlacitko {
+    position: relative;
+    text-align: center;
+}
+div {
+    background-color: blue;
+    color: white;
+    height: 50px;
+    width: 50px;
+}
